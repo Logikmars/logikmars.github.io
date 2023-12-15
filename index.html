@@ -109,7 +109,7 @@
         width: 33.3vw;
         top: 27.2vh;
         right: -35vw;
-        opacity: 1;
+        display: block;
     }
     .f .freebetfo{
         width: 40vw;
@@ -237,7 +237,7 @@
         width: 60vw;
         top: 45vh;
         right: -30vw;
-        opacity: 1;
+        display: block;
     }
     .f .freebet{
         width: 40vw;
@@ -927,7 +927,7 @@ function main(){
         }
       } 
     else if (buttonState === 1) {
-        hide2.style.opacity = 0;
+        hide2.style.display = 'none';
         s_gif.style.display = 'block';
         setTimeout(next2, 1800);
         buttonState++;
