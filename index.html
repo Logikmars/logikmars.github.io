@@ -907,53 +907,45 @@ window.gameReady && window.gameReady();
             function gameStart() {  } 
             function gameClose() {  }
 
-function main(){
-    
+            async function main() {
     if (buttonState === 0) {
-        // Выполняем действие для первого клика
         hide1.style.display = 'none';
         f_gif.style.display = 'block';
-        setTimeout(next1, 2060);
-        setTimeout(settim, 2080);
-        function settim(){
-            buttonState++;
-            buttonState++;
-        }
-        buttonState--;
-        function next1(){
+        await delay(2060);
+        buttonState ++;
         f_gif.style.display = 'none';
         freebet_zero.style.display = 'none';
         freebet_four.style.display = 'block';
-        }
-      } 
-    else if (buttonState === 1) {
+    } else {
         hide2.style.display = 'none';
         s_gif.style.display = 'block';
-        setTimeout(next2, 1800);
+        await delay(1800);
         buttonState++;
         open();
         f_gif.style.display = 'none';
-        function next2(){
         s_gif.style.display = 'none';
         freebet_four.style.display = 'none';
         freebet_final.style.display = 'block';
-        f_gif.style.display = 'none';
-      }}
-      function open(){
-        setTimeout(overlay_open, 3000);
-      }
-
-      function overlay_open(){
-        overlay.style.display = 'block';
-      }
-      
-    
     }
-    function openLink(){
-                console.log("Click on overlay");
-                console.log('click');
-        mraid.open('https://apps.apple.com/ru/app/id1065803457');
-            }  
+}
+
+function open() {
+    setTimeout(overlay_open, 3000);
+}
+
+function overlay_open() {
+    overlay.style.display = 'block';
+}
+
+function openLink() {
+    console.log("Click on overlay");
+    console.log('click');
+    mraid.open('https://apps.apple.com/ru/app/id1065803457');
+}
+
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
         </script>
     </body>
 </html>
