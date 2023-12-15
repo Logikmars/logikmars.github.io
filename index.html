@@ -922,7 +922,6 @@ var buttonState = 0;
 window.gameReady && window.gameReady(); 
             function gameStart() {  } 
             function gameClose() {  }
-
             async function main() {
     if (buttonState === 0) {
     hide1.style.display = 'none';
@@ -949,17 +948,14 @@ window.gameReady && window.gameReady();
 function open() {
     setTimeout(overlay_open, 3000);
 }
-
 function overlay_open() {
     overlay.style.display = 'block';
 }
-
 function openLink() {
     console.log("Click on overlay");
     console.log('click');
     mraid.open('https://apps.apple.com/ru/app/id1065803457');
 }
-
 function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
