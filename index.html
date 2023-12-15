@@ -907,45 +907,46 @@ window.gameReady && window.gameReady();
             function gameStart() {  } 
             function gameClose() {  }
 
-            async function delay(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-async function main() {
+            async function main() {
     if (buttonState === 0) {
-        hide1.style.display = 'none';
-        f_gif.style.display = 'block';
-        await delay(2060);
+    hide1.style.display = 'none';
+    f_gif.style.display = 'block';
+    setTimeout(() => {
         f_gif.style.display = 'none';
         freebet_zero.style.display = 'none';
         freebet_four.style.display = 'block';
-        buttonState++;
-    } else {
+    }, 2060);
+    buttonState++;
+} else {
+    setTimeout(() => {
         hide2.style.display = 'none';
         s_gif.style.display = 'block';
-        await delay(1000);
         open();
-        s_gif.style.display = 'none';
-        freebet_four.style.display = 'none';
-        freebet_final.style.display = 'block';
-    }
-
-
-async function openLink() {
-    console.log("Click on overlay");
-    console.log('click');
-    mraid.open('https://apps.apple.com/ru/app/id1065803457');
+        setTimeout(() => {
+            s_gif.style.display = 'none';
+            freebet_four.style.display = 'none';
+            freebet_final.style.display = 'block';
+        }, 1800);
+    }, 1000);
 }
-
-await main();
+}
 function open() {
     setTimeout(overlay_open, 3000);
 }
 
 function overlay_open() {
     overlay.style.display = 'block';
-}}
+}
 
+function openLink() {
+    console.log("Click on overlay");
+    console.log('click');
+    mraid.open('https://apps.apple.com/ru/app/id1065803457');
+}
+
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
         </script>
     </body>
 </html>
