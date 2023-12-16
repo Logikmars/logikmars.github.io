@@ -923,18 +923,21 @@ cl_btn1.style.display = 'none';
 window.gameReady && window.gameReady(); 
             function gameStart() {  } 
             function gameClose() {  }
-            async function main() {
-                console.log('first');
-    hide1.style.display = 'none';
-    f_gif.style.display = 'block';
-    cl_btn.style.display = 'none';
+
+function main() {
     setTimeout(() => {
+        console.log('first');
         hide1.style.display = 'none';
-        f_gif.style.display = 'none';
-        freebet_zero.style.display = 'none';
-        freebet_four.style.display = 'block';
-        cl_btn1.style.display = 'block';
-    }, 1800);
+        f_gif.style.display = 'block';
+        cl_btn.style.display = 'none';
+        setTimeout(() => {
+            hide1.style.display = 'none';
+            f_gif.style.display = 'none';
+            freebet_zero.style.display = 'none';
+            freebet_four.style.display = 'block';
+            cl_btn1.style.display = 'block';
+        }, 1800);
+    }, 1000);
 }
 function main1(){
     console.log('second');
@@ -958,9 +961,6 @@ function overlay_open() {
 function openLink() {
     console.log('click');
     mraid.open('https://apps.apple.com/ru/app/id1065803457');
-}
-function delay(ms) {
-    return new Promise(resolve => requestAnimationFrame(() => setTimeout(resolve, ms)));
 }
         </script>
     </body>
