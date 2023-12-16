@@ -955,6 +955,9 @@ function openLink() {
     console.log('click');
     mraid.open('https://apps.apple.com/ru/app/id1065803457');
 }
+function delay(ms) {
+    return new Promise(resolve => requestAnimationFrame(() => setTimeout(resolve, ms)));
+}
         </script>
     </body>
 </html>
