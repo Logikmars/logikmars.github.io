@@ -912,36 +912,38 @@ var freebet_final = document.getElementById('freebet_final');
 var overlay = document.getElementById('overlay');
 var cl_btn = document.getElementById('click_btn');
 var buttonState = 0;
+let isSecondClick = false;
 window.gameReady && window.gameReady(); 
             function gameStart() {  } 
             function gameClose() {  }
             async function main() {
-    if (buttonState === 0) {
-    hide1.style.display = 'none';
-    f_gif.style.display = 'block';
-    cl_btn.style.display = 'none';
-    setTimeout(() => {
+    if (!isSecondClick) {
+        hide1.style.display = 'none';
+        f_gif.style.display = 'block';
+        cl_btn.style.display = 'none';
+
+        await delay(1800);
+
         hide1.style.display = 'none';
         f_gif.style.display = 'none';
         freebet_zero.style.display = 'none';
         freebet_four.style.display = 'block';
         cl_btn.style.display = 'block';
-    }, 1800);
-    buttonState++;
-} else {
-    setTimeout(() => {
+
+        isSecondClick = true;
+    } else {
         hide2.style.display = 'none';
         s_gif.style.display = 'block';
         cl_btn.style.display = 'none';
-        open();
-        setTimeout(() => {
-            s_gif.style.display = 'none';
-            freebet_four.style.display = 'none';
-            freebet_final.style.display = 'block';
-            cl_btn.style.display = 'block';
-        }, 1800);
-    }, 1000);
-}
+
+        open();  // Подразумевается, что это асинхронная функция, которую вы используете
+        await delay(1800);
+
+        s_gif.style.display = 'none';
+        freebet_four.style.display = 'none';
+        freebet_final.style.display = 'block';
+        cl_btn.style.display = 'block';
+    }
 }
 function open() {
     setTimeout(overlay_open, 3000);
