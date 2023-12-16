@@ -921,7 +921,6 @@ window.gameReady && window.gameReady();
             function gameStart() {  } 
             function gameClose() {  }
 function main() {
-    setTimeout(() => {
         console.log('first');
         hide1.style.display = 'none';
         f_gif.style.display = 'block';
@@ -933,11 +932,9 @@ function main() {
             freebet_four.style.display = 'block';
             cl_btn1.style.display = 'block';
         }, 1600);
-    }, 1000);
 }
 function main1(){
     console.log('second');
-    setTimeout(() => {
         hide2.style.display = 'none';
         s_gif.style.display = 'block';
         cl_btn1.style.display = 'none';
@@ -948,7 +945,6 @@ function main1(){
             freebet_final.style.display = 'block';
             cl_btn1.style.display = 'block';
         }, 1600);
-    }, 1000);
 }
 function open() {
     setTimeout(overlay_open, 3000);
