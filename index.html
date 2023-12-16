@@ -917,27 +917,31 @@ window.gameReady && window.gameReady();
             function gameClose() {  }
             async function main() {
     if (buttonState === 0) {
-        hide1.style.display = 'none';
-        f_gif.style.display = 'block';
-        cl_btn.style.display = 'none';
-        await delay(1800);
+    hide1.style.display = 'none';
+    f_gif.style.display = 'block';
+    cl_btn.style.display = 'none';
+    setTimeout(() => {
         hide1.style.display = 'none';
         f_gif.style.display = 'none';
         freebet_zero.style.display = 'none';
         freebet_four.style.display = 'block';
         cl_btn.style.display = 'block';
-        buttonState++;
-    } else {
+    }, 1800);
+    buttonState++;
+} else {
+    setTimeout(() => {
         hide2.style.display = 'none';
         s_gif.style.display = 'block';
         cl_btn.style.display = 'none';
         open();
-        await delay(1800);
-        s_gif.style.display = 'none';
-        freebet_four.style.display = 'none';
-        freebet_final.style.display = 'block';
-        cl_btn.style.display = 'block';
-    }
+        setTimeout(() => {
+            s_gif.style.display = 'none';
+            freebet_four.style.display = 'none';
+            freebet_final.style.display = 'block';
+            cl_btn.style.display = 'block';
+        }, 1800);
+    }, 1000);
+}
 }
 function open() {
     setTimeout(overlay_open, 3000);
