@@ -641,14 +641,26 @@
         right: -55vw;
     }
 }
-@media screen and (min-width: 1075px) and (max-width: 1175px) and (min-height: 2400px) and (max-height: 2500px){
+@media screen and (min-width: 1075px) and (max-width: 1175px) and (min-height: 2350px) and (max-height: 2500px){
     .f .kol{
         top: 17.6vh;
     }
     .f .Overlay_mob{
-        width: 130vw;
-    right: -65vw;
-    top: -9.9vh;
+        width: 140vw;
+    right: -67.5vw;
+    top: -20vh;
+    }
+}
+@media screen and (min-width: 1075px) and (max-width: 1175px) and (min-height: 1800px) and (max-height: 2349px){
+    .f .kol{
+        top: 18vh;
+    width: 67vw;
+    right: -34.9vw;
+    }
+    .f .Overlay_mob{
+        width: 140vw;
+    right: -67.5vw;
+    top: -30vh;
     }
 }
        </style>
@@ -735,27 +747,7 @@ function openlink(){
     mraid.open();
 }
 
-function checkOrientation() {
-    if (window.orientation === undefined) {
-      console.log('Ориентация не поддерживается в данном браузере');
-      return;
-    }
-  
-    if (Math.abs(window.orientation) === 90) {
-      console.log('Устройство в ландшафтной ориентации');
-      Overlay_mob.style.display = 'none';
-      overlay_norm.style.display = 'block';
 
-    } else {
-      console.log('Устройство в портретной ориентации');
-      overlay_norm.style.display = 'none';
-      Overlay_mob.style.display = 'block';
-    }
-  }
-  
-  // Вызовите функцию при загрузке страницы и при изменении ориентации
-  window.addEventListener('load', checkOrientation);
-  window.addEventListener('orientationchange', checkOrientation);
         </script>
     </body>
 </html>
