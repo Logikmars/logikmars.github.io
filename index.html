@@ -915,27 +915,12 @@ var n = 0;
 var k = 0;
 
 function firsthide(){
-    if(k==1){
-        setTimeout(() => {
-            hide1.style.display = 'none';
-    first_gif.style.display = 'block';
-    setTimeout(() => {
-        first_gif.style.display = 'none';
-        fhideone.style.display = 'block';
-    }, 1400); 
-        }, 1500);
-    }
-    else{
         hide1.style.display = 'none';
     first_gif.style.display = 'block';
     setTimeout(() => {
         first_gif.style.display = 'none';
         fhideone.style.display = 'block';
     }, 1400); 
-    }
-
-
-    n++;
 }
 function secondhide(){
     hide2.style.display = 'none';
@@ -964,25 +949,12 @@ function secondhide(){
     }, 1400);
 }
 function thirdhide(){
-    if(n==1){
-        setTimeout(() => {
-        hide3.style.display = 'none';
-    third_gif.style.display = 'block';
-    setTimeout(() => {
-        fhidesec.style.display = 'block';
-        third_gif.style.display = 'none';
-    }, 1400);
-    }, 1500);
-    }
-    else{
         hide3.style.display = 'none';
     third_gif.style.display = 'flex';
     setTimeout(() => {
         fhidesec.style.display = 'block';
         third_gif.style.display = 'none';
     }, 1400);
-    }
-    k++;
 }
         </script>
     </body>
