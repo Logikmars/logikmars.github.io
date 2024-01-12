@@ -22,7 +22,17 @@
       transform: translateY(-100%);
     }
   }
-
+  @keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @media(min-aspect-ratio: 1/1){
     .f .Overlay_mob{
         display: none;
@@ -56,6 +66,7 @@
         width: 20vw;
         top: 43vh;
         right: -41vw;
+        animation: pulse 2s infinite;
     }
     .f .speenn{
         width: 20vw;
@@ -173,6 +184,7 @@
         width: 45vw;
         top: 67vh;
         right: -24vw;
+        animation: pulse 2s infinite;
     }
     .f .speenn{
         width: 45vw;
@@ -275,6 +287,32 @@
     }
 }
 /* Iphone 11 */
+@media screen and (min-width: 810px) and (max-width: 840px) and (min-height: 1780px) and (max-height: 1810px){
+.f .balance_zero{
+    top: 57vh;
+}
+.f .sec_text{
+    top: 57vh;
+}
+.f .third_text{
+    top: 57vh;
+}
+.f .last_text{
+    top: 57vh;
+}
+.f .speen{
+    top: 65vh;
+}
+.f .speenn{
+    top: 65vh;
+}
+.f .speennn{
+    top: 65vh;
+}
+.f .speen_last{
+    top: 65vh;
+}
+}
 @media screen and (min-width: 1780px) and (max-width: 1810px) and (min-height: 810px) and (max-height: 840px){
     .f .wheel {
     width: 30vw;
@@ -339,7 +377,7 @@
         top: 22.5vh;
     }
     .f .text{
-        top: 7.5vh;
+        top: 5vh;
     }
 }
 @media screen and (min-width: 840px) and (max-width: 950px) and (min-height: 350px) and (max-height: 450px){
@@ -380,7 +418,18 @@
         right: -7.5vw;
     }
     .f .text{
-        top: 12vh;
+        top: 10vh;
+    }
+}
+/* Kindle Fire HDX */
+@media screen and (min-width: 780px) and (max-width: 820px) and (min-height: 1260px) and (max-height: 1300px){
+    .f .wheel{
+        width: 72vw;
+    right: -37vw;
+    }
+    .f .kol{
+        width: 62vw;
+    right: -31.75vw;
     }
 }
 /* iPad 1 */
@@ -756,6 +805,31 @@
     .f .Overlay_mob{
         height: 100vh;
     }
+    .f .speen{
+        top: 66vh;
+    }
+    .f .speenn{
+        top: 66vh;
+    }
+    .f .speennn{
+        top: 66vh;
+    }
+    .f .speen_last{
+        top: 66vh;
+    }
+    .f .balance_zero{
+        top: 59vh;
+    }
+    .f .sec_text{
+        top: 59vh;
+    }
+    .f .last_text{
+        top: 59vh;
+    }
+    .f .third_text{
+        top: 59vh;
+    }
+
 }
 @media screen and (min-width: 790px) and (max-width: 830px) and (min-height: 350px) and (max-height: 400px){
     .f .text{
@@ -770,6 +844,183 @@
         width: 27vw;
         top: 8vh;
         right: -5.8vw;
+    }
+}
+/* Moto G Power */
+@media screen and (min-width: 400px) and (max-width: 420px) and (min-height: 810px) and (max-height: 830px){
+    .f .speen{
+        top: 66vh;
+    }
+    .f .speenn{
+        top: 66vh;
+    }
+    .f .speennn{
+        top: 66vh;
+    }
+    .f .speen_last{
+        top: 66vh;
+    }
+    .f .balance_zero{
+        top: 59vh;
+    }
+    .f .sec_text{
+        top: 59vh;
+    }
+    .f .last_text{
+        top: 59vh;
+    }
+    .f .third_text{
+        top: 59vh;
+    }
+}
+@media screen and (min-width: 810px) and (max-width: 830px) and (min-height: 400px) and (max-height: 420px){
+    .f .wheel{
+        width: 30vw;
+    right: -7.5vw;
+    }
+    .f .kol{
+        width: 26vw;
+    right: -5.5vw;
+    }
+}
+/* Nexus 5X */
+@media screen and (min-width: 400px) and (max-width: 420px) and (min-height: 650px) and (max-height: 670px){
+    .f .wheel{
+        width: 72vw;
+    right: -37vw;
+    }
+    .f .kol{
+        width: 63vw;
+    right: -32vw;
+    }
+}
+/* Nexus 7 */
+@media screen and (min-width: 590px) and (max-width: 610px) and (min-height: 950px) and (max-height: 970px){
+    .f .wheel{
+        width: 72vw;
+    right: -37vw;
+    }
+    .f .kol{
+        width: 63vw;
+    right: -32vw;
+    }
+}
+/* Pixel 3 */
+@media screen and (min-width: 380px) and (max-width: 400px) and (min-height: 775px) and (max-height: 800px){
+    .f .speen{
+        top: 65vh;
+    }
+    .f .speenn{
+        top: 65vh;
+    }
+    .f .speennn{
+        top: 65vh;
+    }
+    .f .speen_last{
+        top: 65vh;
+    }
+    .f .balance_zero{
+        top: 58vh;
+    }
+    .f .sec_text{
+        top: 58vh;
+    }
+    .f .third_text{
+        top: 58vh;
+    }
+    .f .last_text{
+        top: 58vh;
+    }
+}
+/* Pixel 4 */
+@media screen and (min-width: 340px) and (max-width: 360px) and (min-height: 735px) and (max-height: 750px){
+    .f .speen{
+        top: 65vh;
+    }
+    .f .speenn{
+        top: 65vh;
+    }
+    .f .speennn{
+        top: 65vh;
+    }
+    .f .speen_last{
+        top: 65vh;
+    }
+    .f .balance_zero{
+        top: 58vh;
+    }
+    .f .sec_text{
+        top: 58vh;
+    }
+    .f .third_text{
+        top: 58vh;
+    }
+    .f .last_text{
+        top: 58vh;
+    }
+}
+/* JioPhone 2 */
+@media screen and (min-width: 230px) and (max-width: 250px) and (min-height: 310px) and (max-height: 330px){
+    .f .wheel{
+        width: 55vw;
+    right: -27vw;
+    top: 19vh;
+    }
+    .f .kol{
+        width: 50vw;
+    right: -24.5vw;
+    top: 21vh;
+    }
+}
+@media screen and (min-width: 310px) and (max-width: 330px) and (min-height: 230px) and (max-height: 250px){
+    .f .wheel{
+        width: 40vw;
+    right: -13vw;
+    top: 7vh;
+    }
+    .f .kol{
+        width: 35vw;
+    right: -10.5vw;
+    }
+}
+/* iPhone 4 */
+@media screen and (min-width: 310px) and (max-width: 330px) and (min-height: 470px) and (max-height: 490px){
+    .f .wheel{
+        width: 55vw;
+    right: -27vw;
+    top: 19vh;
+    }
+    .f .kol{
+        width: 50vw;
+    right: -24.5vw;
+    top: 21vh;
+    }
+}
+@media screen and (min-width: 730px) and (max-width: 740px) and (min-height: 410px) and (max-height: 420px){
+    .f .kol{
+        top: 9vh;
+    }
+}
+@media screen and (min-width: 805px) and (max-width: 815px) and (min-height: 370px) and (max-height: 380px){
+    .f .wheel{
+        width: 25vw;
+    right: -5vw;
+    top: 7vh;
+    }
+    .f .kol{
+        width: 22vw;
+    top: 10vh;
+    right: -3.4vw;
+    }
+}
+@media screen and (min-width: 1900px) and (max-width: 1940px) and (min-height: 930px) and (max-height: 960px){
+    .f .wheel{
+        width: 30vw;
+    right: -7.5vw;
+    }
+    .f .kol{
+        width: 25.5vw;
+    right: -5vw;
     }
 }
         </style>
@@ -821,10 +1072,12 @@ var audio = document.getElementById("myAudio");
 
 function myfun(){
     kol.style.animation = 'spin 5s ease';
+    speen.style.animation = 's'
     setTimeout(() => {
         kol.style.animationFillMode = 'forwards';
         speen.style.display = 'none';
         speen1.style.display = 'block';
+        speen1.style.animation = 'pulse 2s infinite'
         ftext.style.display = 'none';
         sec_text.style.display = 'block';
         first_pop.style.display = 'block';
@@ -840,10 +1093,12 @@ function myfun(){
 
 function myfunn(){
     kol.style.animation = 'speenn 5s ease';
+    speen1.style.animation = 's'
     setTimeout(() => {
         kol.style.animationFillMode = 'forwards';
         speen1.style.display = 'none';
         speennn.style.display = 'block';
+        speennn.style.animation = 'pulse 2s infinite'
         sec_text.style.display = 'none';
         third_text.style.display = 'block';
         sec_pop.style.display = 'block';
@@ -858,6 +1113,7 @@ function myfunn(){
 }
 function myfunnn(){
     kol.style.animation = 'spennn 5s ease';
+    speennn.style.animation = 's'
     setTimeout(() => {
         kol.style.animationFillMode = 'forwards';
         speennn.style.display = 'none';
@@ -885,22 +1141,22 @@ function myfunnn(){
 
 function first_open(){
     console.log('click');
-    mraid.open('https://apps.apple.com/it/app/id846549672');
+    mraid.open('https://apps.apple.com/gb/app/jackpot-city-online-casino-joy/id6450707277');
 }
 
 function sec_open(){
     console.log('click');
-    mraid.open('https://apps.apple.com/it/app/id846549672');
+    mraid.open('https://apps.apple.com/gb/app/jackpot-city-online-casino-joy/id6450707277');
 }
 
 function third_open(){
     console.log('click');
-    mraid.open('https://apps.apple.com/it/app/id846549672');
+    mraid.open('https://apps.apple.com/gb/app/jackpot-city-online-casino-joy/id6450707277');
 }
 
 function openlink(){
     console.log('click');
-    mraid.open('https://apps.apple.com/it/app/id846549672');
+    mraid.open('https://apps.apple.com/gb/app/jackpot-city-online-casino-joy/id6450707277');
 }
 
 function checkOrientation() {
