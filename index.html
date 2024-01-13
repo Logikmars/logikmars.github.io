@@ -22,7 +22,17 @@
       transform: translateY(-100%);
     }
   }
-
+  @keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @media(min-aspect-ratio: 1/1){
     .f .Overlay_mob{
         display: none;
@@ -56,6 +66,7 @@
         width: 20vw;
         top: 43vh;
         right: -41vw;
+        animation: pulse 4s infinite;
     }
     .f .speenn{
         width: 20vw;
@@ -173,6 +184,7 @@
         width: 45vw;
         top: 67vh;
         right: -24vw;
+        animation: pulse 4s infinite;
     }
     .f .speenn{
         width: 45vw;
@@ -906,6 +918,39 @@
         top: 13vh;
     }
 }
+/* Mintegral Ipad */
+@media screen and (min-width: 290px) and (max-width: 310px) and (min-height: 380px) and (max-height: 400px){
+    .f .wheel{
+        width: 60vw;
+    right: -30vw;
+    top: 13vh;
+    }
+    .f .kol{
+        width: 51.5vw;
+    top: 16vh;
+    right: -25.5vw;
+    }
+}
+@media screen and (min-width: 415px) and (max-width: 435px) and (min-height: 300px) and (max-height: 330px){
+    .f .kol{
+        width: 31vw;
+    top: 8.5vh;
+    right: -8vw;
+    }
+}
+/* Mintegral X */
+@media screen and (min-width: 450px) and (max-width: 470px) and (min-height: 200px) and (max-height: 230px){
+    .f .wheel{
+        width: 30vw;
+    right: -7.5vw;
+    top: 3vh;
+    }
+    .f .kol{
+        width: 26.5vw;
+    top: 7vh;
+    right: -5.5vw;
+    }
+}
         </style>
     </head>
     <body>
@@ -1026,43 +1071,49 @@ if (isiOS) {
   console.log("Устройство работает под управлением iOS");
   function first_open(){
     console.log('click');
-    mraid.open('https://apps.apple.com/gb/app/gala-bingo-play-bingo-games/id579575934?l=ru');
+    var link = "https://apps.apple.com/gb/app/gala-bingo-play-bingo-games/id579575934?l=ru";
+        window.open(link, "_blank");
 }
 
 function sec_open(){
     console.log('click');
-    mraid.open('https://apps.apple.com/gb/app/gala-bingo-play-bingo-games/id579575934?l=ru');
+    var link = "https://apps.apple.com/gb/app/gala-bingo-play-bingo-games/id579575934?l=ru";
+        window.open(link, "_blank");
 }
 
 function third_open(){
     console.log('click');
-    mraid.open('https://apps.apple.com/gb/app/gala-bingo-play-bingo-games/id579575934?l=ru');
+    var link = "https://apps.apple.com/gb/app/gala-bingo-play-bingo-games/id579575934?l=ru";
+        window.open(link, "_blank");
 }
 
 function openlink(){
     console.log('click');
-    mraid.open('https://apps.apple.com/gb/app/gala-bingo-play-bingo-games/id579575934?l=ru');
+    var link = "https://apps.apple.com/gb/app/gala-bingo-play-bingo-games/id579575934?l=ru";
+        window.open(link, "_blank");
 }
 } else if (isAndroid) {
   console.log("Устройство работает под управлением Android");
   function first_open(){
     console.log('click');
-    mraid.open('https://play.google.com/store/apps/details?id=com.gala.android.bingo&hl=ru&gl=GB');
+    var link = "https://play.google.com/store/apps/details?id=com.gala.android.bingo&hl=ru&gl=GB";
+        window.open(link, "_blank");
 }
 
 function sec_open(){
     console.log('click');
-    mraid.open('https://play.google.com/store/apps/details?id=com.gala.android.bingo&hl=ru&gl=GB');
+    var link = "https://play.google.com/store/apps/details?id=com.gala.android.bingo&hl=ru&gl=GB";
+        window.open(link, "_blank");
 }
 
 function third_open(){
     console.log('click');
-    mraid.open('https://play.google.com/store/apps/details?id=com.gala.android.bingo&hl=ru&gl=GB');
+        var link = "https://play.google.com/store/apps/details?id=com.gala.android.bingo&hl=ru&gl=GB";
 }
 
 function openlink(){
     console.log('click');
-    mraid.open('https://play.google.com/store/apps/details?id=com.gala.android.bingo&hl=ru&gl=GB');
+            window.open(link, "_blank");
 }
 } else {
   console.log("Устройство не является ни iOS, ни Android");
@@ -1091,6 +1142,20 @@ function checkOrientation() {
   // Вызовите функцию при загрузке страницы и при изменении ориентации
   window.addEventListener('load', checkOrientation);
   window.addEventListener('orientationchange', checkOrientation);
+  window.gameReady && window.gameReady(); 
+            function gameStart() {  } 
+            function gameClose() {  }
+            function scaleElement() {
+        var element = document.getElementById('scaledElement');
+        var screenWidth = window.innerWidth;
+        var screenHeight = window.innerHeight;
+
+        // Adjust size based on screen width
+        element.style.width = screenWidth * 0.5 + 'px'; // Set to 50% of screen width
+        element.style.height = screenHeight * 0.2 + 'px'; // Set to 20% of screen height
+    }
+    var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
         </script>
     </body>
 </html>
