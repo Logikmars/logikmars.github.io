@@ -1067,56 +1067,64 @@ var isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 var isAndroid = /Android/.test(navigator.userAgent);
 
 // Использование результатов проверки
-if (isiOS) {
-  console.log("Устройство работает под управлением iOS");
   function first_open(){
     console.log('click');
-    var link = "https://apps.apple.com/gb/app/gala-bingo-play-bingo-games/id579575934?l=ru";
-        window.open(link, "_blank");
+        if (isiOS) {
+      console.log("Устройство работает под управлением iOS");
+      var link = "https://apps.apple.com/gb/app/gala-bingo-play-bingo-games/id579575934?l=ru";
+      window.open(link, "_blank");
+    } else if (isAndroid) {
+      console.log("Устройство работает под управлением Android");
+      var link = "https://play.google.com/store/apps/details?id=com.gala.android.bingo&hl=ru&gl=GB";
+      window.open(link, "_blank");
+    } else {
+      console.log("Устройство не является ни iOS, ни Android");
+    }
 }
 
 function sec_open(){
     console.log('click');
-    var link = "https://apps.apple.com/gb/app/gala-bingo-play-bingo-games/id579575934?l=ru";
-        window.open(link, "_blank");
+    if (isiOS) {
+      console.log("Устройство работает под управлением iOS");
+      var link = "https://apps.apple.com/gb/app/gala-bingo-play-bingo-games/id579575934?l=ru";
+      window.open(link, "_blank");
+    } else if (isAndroid) {
+      console.log("Устройство работает под управлением Android");
+      var link = "https://play.google.com/store/apps/details?id=com.gala.android.bingo&hl=ru&gl=GB";
+      window.open(link, "_blank");
+    } else {
+      console.log("Устройство не является ни iOS, ни Android");
+    }
 }
 
 function third_open(){
     console.log('click');
-    var link = "https://apps.apple.com/gb/app/gala-bingo-play-bingo-games/id579575934?l=ru";
-        window.open(link, "_blank");
+    if (isiOS) {
+      console.log("Устройство работает под управлением iOS");
+      var link = "https://apps.apple.com/gb/app/gala-bingo-play-bingo-games/id579575934?l=ru";
+      window.open(link, "_blank");
+    } else if (isAndroid) {
+      console.log("Устройство работает под управлением Android");
+      var link = "https://play.google.com/store/apps/details?id=com.gala.android.bingo&hl=ru&gl=GB";
+      window.open(link, "_blank");
+    } else {
+      console.log("Устройство не является ни iOS, ни Android");
+    }
 }
 
 function openlink(){
     console.log('click');
-    var link = "https://apps.apple.com/gb/app/gala-bingo-play-bingo-games/id579575934?l=ru";
-        window.open(link, "_blank");
-}
-} else if (isAndroid) {
-  console.log("Устройство работает под управлением Android");
-  function first_open(){
-    console.log('click');
-    var link = "https://play.google.com/store/apps/details?id=com.gala.android.bingo&hl=ru&gl=GB";
-        window.open(link, "_blank");
-}
-
-function sec_open(){
-    console.log('click');
-    var link = "https://play.google.com/store/apps/details?id=com.gala.android.bingo&hl=ru&gl=GB";
-        window.open(link, "_blank");
-}
-
-function third_open(){
-    console.log('click');
-        var link = "https://play.google.com/store/apps/details?id=com.gala.android.bingo&hl=ru&gl=GB";
-}
-
-function openlink(){
-    console.log('click');
-            window.open(link, "_blank");
-}
-} else {
-  console.log("Устройство не является ни iOS, ни Android");
+    if (isiOS) {
+      console.log("Устройство работает под управлением iOS");
+      var link = "https://apps.apple.com/gb/app/gala-bingo-play-bingo-games/id579575934?l=ru";
+      window.open(link, "_blank");
+    } else if (isAndroid) {
+      console.log("Устройство работает под управлением Android");
+      var link = "https://play.google.com/store/apps/details?id=com.gala.android.bingo&hl=ru&gl=GB";
+      window.open(link, "_blank");
+    } else {
+      console.log("Устройство не является ни iOS, ни Android");
+    }
 }
 
 
