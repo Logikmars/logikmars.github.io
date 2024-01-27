@@ -1,0 +1,359 @@
+@import "null";
+
+@keyframes mails{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+.app_bg{
+  position: absolute;
+  height: auto;
+  display: flex;
+  img{
+      width: 100dvw;
+      height: 100dvh;
+  }
+  @media (max-aspect-ratio: 1/1){
+    display: none;
+  }
+}
+.app_mobbg{
+display: none;
+@media (max-aspect-ratio: 1/1){
+  display: flex;
+  position: absolute;
+  height: auto;
+  img{
+    width: 100dvw;
+    height: 100dvh;
+  }
+}
+}
+
+.app {
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+  }
+
+  .free_img {
+    width: 0;
+    height: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .decor {
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    &_middle{
+        right: -5dvw;
+        top: 10dvh;
+        img{
+            width: 50vw;
+        }
+        @media (max-aspect-ratio: 1/1){
+          img{
+            width: 100dvw;
+          }
+        }
+    }
+    &_left{
+        justify-content: left;
+        right: 50dvw;
+        top: 50dvh;
+        align-items: flex-end;
+        img{
+            width: 50vw;
+        }
+    }
+    &_upleft{
+        justify-content: left;
+        align-items: baseline;
+        top: -50dvh;
+        right: 51dvw;
+        img{
+            width: 50dvw;
+        }
+    }
+    &_right{
+        justify-content: right;
+        align-items: baseline;
+        top: -50dvh;
+        right: -50dvw;
+        img{
+            width: 50dvw;
+        }
+    }
+    &_goldenup{
+      display: none;
+      @media (max-aspect-ratio: 1/1){
+        display: flex;
+        align-items: baseline;
+        top: -44dvh;
+        img{
+          width: 80dvw;
+        }
+      }
+    }
+    &_goldendown{
+      display: none;
+      @media (max-aspect-ratio: 1/1){
+        display: flex;
+        align-items: baseline;
+        top: -40dvh;
+        img{
+          width: 80dvw;
+        }
+      }
+    }
+  }
+
+  .content_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    row-gap: 2vh;
+    &_logo {
+        height: 22vh;
+        align-self: baseline;
+        img{
+            width: 70vw;
+        }
+        @media (max-aspect-ratio: 1/1){
+          height: 10dvh;
+        }
+      }
+    
+      &_label {
+        height: 15dvh;
+        align-items: baseline;
+        img{
+            width: 50dvw;
+        }
+        @media (max-aspect-ratio: 1/1){
+          height: 26dvh;
+        }
+      }
+      &_text{
+        height: 40dvh;
+        @media (max-aspect-ratio: 1/1){
+          height: 15dvh;
+        }
+      }
+      &_desc{
+        height: 5vh;
+        align-items: flex-end;
+        @media (max-aspect-ratio: 1/1){
+          height: 30dvh;
+        }
+      }
+  }
+
+
+
+  #logo {
+    width: 20vw;
+    @media (max-aspect-ratio: 1/1){
+      width: 40dvw;
+    }
+  }
+  
+  #label {
+    width: 40vw;
+    @media (max-aspect-ratio: 1/1){
+      width: 50dvw;
+    }
+  }
+  #btn {
+    width: 20vw;
+    @media (max-aspect-ratio: 1/1){
+      width: 50dvw;
+    }
+  }
+  #description{
+    width: 50dvw;
+    @media (max-aspect-ratio: 1/1){
+      width: 80dvw;
+    }
+  }
+
+  .mobtable{
+    display: none;
+    @media (max-aspect-ratio: 1/1){
+      display: flex ;
+      text-align: center;
+      border-collapse: collapse;
+      img{
+        width: 70dvw;
+      }
+    }
+  }
+  .inputonemob{
+    padding-top: 1dvh;
+    input{
+      width: 60dvw;
+      height: 5dvh;
+      border-radius: 20px;
+      font-weight: bold;
+      color: gray;
+      font-size: large;
+    }
+  }
+  .inputsecmob{
+    padding-top: 1dvh;
+    input{
+      width: 60dvw;
+      height: 5dvh;
+      border-radius: 20px;
+      font-weight: bold;
+      color: gray;
+      font-size: large;
+    }
+  }
+  .inputthirdmob{
+    padding-top: 1dvh;
+    input{
+      width: 60dvw;
+      height: 15dvh;
+      border-radius: 20px;
+      font-weight: bold;
+      color: gray;
+      font-size: large;
+    }
+  }
+  .table{
+    width: 20vw;
+    text-align: center;
+    border-collapse: collapse;
+    img{
+      width: 25dvw;
+    }
+    @media (max-aspect-ratio: 1/1){
+      display: none;
+      img{
+        width: 50dvw;
+      }
+    }
+  }
+
+  .btn {
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    display: inline-block;
+    img{
+      width: 50dvw; /* Растягиваем изображение на всю ширину кнопки */
+    height: auto; /* Поддерживаем соотношение сторон изображения */
+    display: block; /* Убираем пробелы под изображением */
+    }
+  }
+
+  .inputone{
+    padding-right: 1dvw;
+    padding-bottom: 3dvh;
+    input{
+      width: 20dvw;
+      height: 5dvh;
+      border-radius: 10px;
+      color: gray;
+    }
+    @media (max-aspect-ratio: 1/1){
+      padding-top: 2dvh;
+      input{
+        width: 40dvw;
+        height: 7dvh;
+      }
+    }
+
+  }
+  .inputsec{
+    padding-bottom: 3dvh;
+    input{
+      width: 20dvw;
+      height: 5dvh;
+      border-radius: 10px;
+      color: gray;
+    }
+    @media (max-aspect-ratio: 1/1){
+      input{
+        width: 40dvw;
+        height: 7dvh;
+      }
+    }
+  }
+  .inputthird{
+    padding-top: 1dvh;
+    padding-bottom: 3dvh;
+    input{
+      width: 41dvw;
+      height: 15dvh;
+      border-radius: 10px;
+      color: gray;
+    }
+    @media (max-aspect-ratio: 1/1){
+      input{
+        width: 82dvw;
+      }
+    }
+  }
+
+  .inputtbtn{
+    padding-top: 1dvh;
+  }
+
+  .inputtbtnmob{
+    padding-top: 1dvh;
+  }
+
+  .modal{
+    position: absolute;
+    width: 40dvw;
+    height: 10dvw;
+    border-radius: 50px;
+    text-align: center; /* Добавлено для выравнивания текста по центру */
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s ease;
+    top: 10vh;
+    img{
+      width: 20dvw;
+    }
+    @media (max-aspect-ratio: 1/1){
+      img{
+        width: 50dvw;
+      }
+    }
+  }
